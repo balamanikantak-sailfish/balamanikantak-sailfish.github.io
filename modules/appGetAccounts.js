@@ -4,16 +4,21 @@
 var app2 = angular.module('appGetAccounts',['ui.grid.pagination']);
 
 app2.controller('getAccountsCtrl', function ($scope,$http,$q,$log,$filter,_,$state){
-
+var baseurl='https://caprofessions.herokuapp.com/';
     $scope.gridOptions={};
     $scope.gridOptions.columnDefs = [
         { name: 'accountname',displayName:'Account' },
         { name: 'address',displayName:'Address'},
         { name: 'phoneno',displayName:'Phone No.'},
-        { name: 'Add Pancard Entity',
+        { name: 'Add',
             enableFiltering:false,
             cellTemplate:'<div>' +
             '  <a href="#/i/CA/CnPE?an={{row.entity.accountname}}">Add Subsidary</a>' +
+            '</div>' },
+        { name: 'view',displayName:'View',
+            enableFiltering:false,
+            cellTemplate:'<div>' +
+            '  <a href="#/vw/CA/VwPE?an={{row.entity.accountname}}">View</a>' +
             '</div>' }
     ];
     $scope.gridOptions.enableFiltering = true;
@@ -21,7 +26,7 @@ app2.controller('getAccountsCtrl', function ($scope,$http,$q,$log,$filter,_,$sta
     $scope.gridOptions.paginationPageSize= 10;
 
 
-        $http.get('https://caprofessions.herokuapp.com/api/accounts').success(function(response){
+        $http.get(baseurl+'api/accounts').success(function(response){
 
 
         var arr = [];

@@ -4,6 +4,7 @@
 var app2 = angular.module('appCreatePanEntity',[]);
 
 app2.controller('createPanEntitiyCtrl', function ($scope,$http,$q,$log,$filter,$location){
+    var baseurl = 'https://caprofessions.herokuapp.com/';
     $scope.pancardentities={};
 
     $scope.createPanCardEntity=function(){
@@ -11,7 +12,7 @@ app2.controller('createPanEntitiyCtrl', function ($scope,$http,$q,$log,$filter,$
         $scope.result=$scope.pancardentities;
         $http({
             method  : 'POST',
-            url     : 'https://caprofessions.herokuapp.com/api/accounts/pan/insert/'+$location.search().an.toString(),
+            url     : baseurl+'api/accounts/pan/insert/'+$location.search().an.toString(),
             data    : $scope.pancardentities, //forms user object
             headers : {'Content-Type': 'application/json'}
         })
@@ -21,7 +22,7 @@ app2.controller('createPanEntitiyCtrl', function ($scope,$http,$q,$log,$filter,$
                     $scope.errorName = data.errors;
                 } else {
                      $scope.message = data;
-                    //$location.path('/vw/CA/VwPE');
+                    $location.path('/vw/CA/VwPE?an='+$location.search().an.toString());
                 }
             });
 

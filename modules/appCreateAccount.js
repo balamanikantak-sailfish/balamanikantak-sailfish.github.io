@@ -5,7 +5,7 @@ var app2 = angular.module('appCreateAccount',[]);
 
 app2.controller('createAccountCtrl', function ($scope,$http,$q,$log,$filter,$location){
 
-
+   var baseurl = 'https://caprofessions.herokuapp.com/';
     $scope.account={};
 
     $scope.createAccount=function(){
@@ -13,7 +13,7 @@ app2.controller('createAccountCtrl', function ($scope,$http,$q,$log,$filter,$loc
        // $scope.result=$scope.account;
         $http({
             method  : 'POST',
-            url     : 'https://caprofessions.herokuapp.com/api/accounts/insert',
+            url     : baseurl+'api/accounts/insert',
             data    : $scope.account, //forms user object
             headers : {'Content-Type': 'application/json'}
         })
