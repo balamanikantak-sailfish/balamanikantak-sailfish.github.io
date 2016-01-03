@@ -21,7 +21,7 @@ app.controller('getPanEntitiesCtrl', function ($scope,$http,$q,$log,$filter,_,$s
     $scope.gridOptions.paginationPageSize= 10;
 
 
-    $http.get(baseurl+'api/accounts/pan/'+$location.search().an.toString()).success(function(response){
+    $http.get(baseurl+'api/accounts/pan/vw?an='+$location.search().an.toString()).success(function(response){
         var arr = [];// var arr1=[];
         _.each(response,function(value,key){
             arr.push(_.pick(value,'accountname','address','phoneno'));
