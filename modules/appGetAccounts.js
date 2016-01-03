@@ -11,11 +11,11 @@ var baseurl='https://caprofessions.herokuapp.com/';
         { name: 'address',displayName:'Address'},
         { name: 'phoneno',displayName:'Phone No.'},
         { name: 'Add',
-            enableFiltering:false,
+            enableFiltering:false,cellClass: 'grid-align',
             cellTemplate:'<div>' +
             '  <a href="#/i/CA/CnPE?an={{row.entity.accountname}}">Add Subsidary</a>' +
             '</div>' },
-        { name: 'view',displayName:'View',
+        { name: 'view',displayName:'View',cellClass: 'grid-align',
             enableFiltering:false,
             cellTemplate:'<div>' +
             '  <a href="#/vw/CA/VwPE?an={{row.entity.accountname}}">View</a>' +

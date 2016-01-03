@@ -11,7 +11,7 @@ app.controller('getPanEntitiesCtrl', function ($scope,$http,$q,$log,$filter,_,$s
         { name: 'pancardname',displayName:'Pancard Name'},
         { name: 'pancardtype',displayName:'Pancard Type'},
         { name: 'Upload',
-            enableFiltering:false,
+            enableFiltering:false,cellClass: 'grid-align',
             cellTemplate:'<div>' +
             '  <a href="#/i/CA/CnPE?pid={{row.entity.pancardid}}">Upload</a>' +
             '</div>' }
