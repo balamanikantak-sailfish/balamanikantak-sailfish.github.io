@@ -11,7 +11,7 @@ app2.controller('createPanEntitiyCtrl', function ($scope,$http,$q,$log,$filter,$
         $scope.result=$scope.pancardentities;
         $http({
             method  : 'POST',
-            url     : 'http://localhost:3000/api/accounts/pan/insert/'+$location.search().an.toString(),
+            url     : 'https://caprofessions.herokuapp.com/api/accounts/pan/insert/'+$location.search().an.toString(),
             data    : $scope.pancardentities, //forms user object
             headers : {'Content-Type': 'application/json'}
         })

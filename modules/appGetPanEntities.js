@@ -20,7 +20,7 @@ app.controller('getPanEntitiesCtrl', function ($scope,$http,$q,$log,$filter,_,$s
     $scope.gridOptions.paginationPageSize= 10;
 
 
-    $http.get('http://localhost:3000/api/accounts').success(function(response){
+    $http.get('https://caprofessions.herokuapp.com/api/accounts').success(function(response){
 
 
         var arr = [];

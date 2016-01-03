@@ -21,7 +21,7 @@ app2.controller('getAccountsCtrl', function ($scope,$http,$q,$log,$filter,_,$sta
     $scope.gridOptions.paginationPageSize= 10;
 
 
-        $http.get('http://localhost:3000/api/accounts').success(function(response){
+        $http.get('https://caprofessions.herokuapp.com/api/accounts').success(function(response){
 
 
         var arr = [];

@@ -13,7 +13,7 @@ app2.controller('createAccountCtrl', function ($scope,$http,$q,$log,$filter,$loc
        // $scope.result=$scope.account;
         $http({
             method  : 'POST',
-            url     : 'http://localhost:3000/api/accounts/insert',
+            url     : 'https://caprofessions.herokuapp.com/api/accounts/insert',
             data    : $scope.account, //forms user object
             headers : {'Content-Type': 'application/json'}
         })
