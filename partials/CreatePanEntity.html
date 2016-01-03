@@ -1,0 +1,43 @@
+<br>
+<br>
+<br>
+<div class="container" >
+    <h2 class="text-danger">Create PanCard Details</h2>
+    <form role="form" ng-controller="createPanEntitiyCtrl" ng-submit="createPanCardEntity()">
+        <div class="form-group">
+            <label for="pancardname">Pancard Holder Name:</label>
+            <input type="text" class="form-control" ng-model="pancardentities.pancardname" id="pancardname" placeholder="Enter Pancard Holder Name">
+        </div>
+        <div class="form-group">
+            <label for="pancardtype">PanCard Type:</label>
+            <select class="form-control" ng-model="pancardentities.pancardtype" id="pancardtype">
+                <option><--Select--></option>
+                <option>Individual</option>
+                <option>Proprietary</option>
+                <option>Partnership firms</option>
+                <option>LLP-MCA</option>
+                <option>Private Limited(Pvt.Ltd.)</option>
+                <option>Limited</option>
+                <option>Trusts</option>
+                <option>Societies</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="pancardid">Pancard Number:</label>
+            <input type="text" class="form-control" ng-model="pancardentities.pancardid" id="pancardid" placeholder="Enter Pancard Number">
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone/Mobile number:</label>
+            <input type="number" class="form-control" ng-model="pancardentities.phone" id="phone" placeholder="Enter Phone/Mobile Number">
+        </div>
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <textarea class="form-control" rows="5" ng-model="pancardentities.address" id="address"></textarea>
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+        {{result}}
+        {{message}}
+    </form>
+    <div ui-view></div>
+</div>
