@@ -18,7 +18,7 @@ app.controller('getPanEntitiesCtrl', function ($scope,$http,$q,$log,$filter,_,$s
     ];
     $scope.gridOptions.enableFiltering = true;
     $scope.gridOptions.paginationPageSizes = [10, 20, 30];
-    $scope.gridOptions.paginationPageSize= 10;
+    $scope.gridOptions.paginationPageSize= 15;
 
 
     $http.get(baseurl+'api/accounts/pan/vw?an='+$location.search().an.toString()).success(function(response){

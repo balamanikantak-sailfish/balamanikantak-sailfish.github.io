@@ -21,8 +21,8 @@ app2.controller('createPanEntitiyCtrl', function ($scope,$http,$q,$log,$filter,$
                     // Showing errors.
                     $scope.errorName = data.errors;
                 } else {
-                     $scope.message = data;
-                    $location.path('/vw/CA/VwPE?an='+$location.search().an.toString());
+                     //$scope.message = data;
+                    $location.path('/vw/CA/VwPE');
                 }
             });
 
